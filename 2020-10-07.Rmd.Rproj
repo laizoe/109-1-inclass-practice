@@ -1,0 +1,78 @@
+---
+title: "2020-10-07.Rmd"
+author: "賴柔伊"
+date: "2020/10/7"
+output: html_document
+---
+
+```{r}
+heightsOftheEntireClassroom<-c()
+```
+```{r}
+heightsofAStudentComingInsideTheClassroom<-
+sample(165:200,1)
+```
+
+
+```{r}
+# method 1: concatenate 
+heightsOftheEntireClassroom <-
+  c()
+    heightsOftheEntireClassroom,
+    heightOfAStudentComingInsideTheClassroom
+```
+
+
+```{r}
+# method 2: 
+heightsOftheEntireClassroom2 <-
+  heightOfAStudentComingInsideTheClassroom
+```
+
+
+```{r}
+num1 <- 5
+vNum1 <- c(2,5)
+vNum2 <- c(2, num1)
+```
+```{r}
+vNum1 <- c(-1,5)
+vNum2 <- c(2,3)
+vNum3 <- c(vNum1,vNum2)
+vNum4 <- c(-1,5,2,3)
+vNum5 <- c(c(-1,5),c(2,3))
+```
+```{r}
+vNum1 <- c(-1,5)
+vNum2 <- c(2,3)
+vNum4 <- c() # 空向量
+```
+```{r}
+vNum3 <- c(vNum2, vNum1)
+vNum4 <- c(vNum4, vNum1) # 向量疊代 （recursive vector concatenate）
+```
+```{r}
+cat(dialogue, sep="\n")
+cat(dialogue, sep="\n")
+cat(dialogue,
+  sep="\n")
+```
+```{r}
+context<-"老師說換行要寫\n"
+cat(context)
+```
+```{r}
+object.size(num1)
+object.size(num2)
+object.size(num1Vector)
+object.size(num2Vector)
+```
+
+
+```{r}
+dialogue <- c('小明說："明天不用上課。"',
+               '小花說："真的嗎？"')
+dialogue # 顯示原始值的內容（含輸入時的引號）
+cat(dialogue, sep="\n") # 顯示給人類看（含存出來）的值，sep="\n", 不同元素換行陳列。
+writeLines(dialogue, "conversation.txt") # cat顯示的正是存出來樣貌。
+```
