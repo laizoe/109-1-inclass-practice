@@ -1,0 +1,29 @@
+---
+title: '11'
+author: '11'
+date: "2020/11/4"
+output: html_document
+---
+```{r}
+install.packages("devtools")
+remotes::install_github("tpemartin/econDS", force=T)
+```
+```{r}
+Biden_vote <- list(
+time = ymd_hm("2020-11-03 14:40 "),
+vote <- integer("224")
+)
+as.numeric(Biden_vote)
+_
+
+```
+```{r}
+America_Vote <- list(
+  time = ymd_hm("2020-11-04 14:46"),
+  trump = "213",
+  biden = "224",
+  takesall = "270"
+)
+```
+
+
