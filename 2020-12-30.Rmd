@@ -1,0 +1,49 @@
+---
+title: '2020-12-30'
+author: "410973005賴柔伊"
+date: "2020/12/30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+members <- jsonlite::fromJSON("https://www.dropbox.com/s/olji1q29t2autec/ntpumeetMembers.json?dl=1", simplifyDataFrame = F)
+memberIds <- purrr::map_chr(members, ~{.x[["memberID"]]})
+```
+
+```{r}
+members[[1]]$memberID==memberIds
+members[[2]]$memberID==memberIds
+ purr::map(1:1000,
+           {
+             members[[.x]]$memberID==memberIds
+           })->list_pickMe
+```
+```{r}
+currentUser<-{
+  purr::transpose(members)->tr_members
+  which_members$memberID==memberIds
+}
+```
+```{r}
+jsonlite::fromJSON("https://www.dropbox.com/s/ttw2j7nitc35vfx/palaceMuseumPainting.json?dl=1", simplifyDataFrame = F) -> painting
+```
+
+```{r}
+get_painting_dynasty <- function(PaintingName){
+
+get_paintingname <- {
+
+}
+
+extract_dynasty <- {
+
+}
+extract_dynasty
+}
+get_painting_dynasty
+```
+
